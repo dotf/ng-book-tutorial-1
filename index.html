@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ng book first app</title>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+
+        System.import('app/app')
+                .then(null, console.error.bind(console));
+    </script>
+    <link rel="stylesheet" href="node_modules/semantic-ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Menu Bar -->
+<div class="ui menu">
+    <div class="ui container">
+        <a href="#" class="header item">
+            ng-book 2
+        </a>
+        <div class="header item borderless">
+            <h1 class="ui header">
+                Angular 2 Simple Reddit
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div class="ui main text container">
+    <reddit></reddit> <!-- <--- Our app loads here! -->
+</div>
+</body>
+</html>
